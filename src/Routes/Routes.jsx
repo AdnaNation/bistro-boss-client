@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "../Layout/Dashboard";
 import Main from "../Layout/Main";
+import AllUsers from "../pages/Dashboard/AllUsers";
 import Cart from "../pages/Dashboard/Cart";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login";
@@ -56,6 +57,11 @@ export const router = createBrowserRouter([
       {
         path: "cart",
         element: <Cart></Cart>,
+      },
+      // admin routes
+      {
+        path: "users",
+        element: <AllUsers></AllUsers>,
       },
     ],
   },
