@@ -9,6 +9,7 @@ import Menu from "../pages/Menu";
 import Order from "../pages/Order/Order";
 import Secret from "../pages/Secret";
 import SignUp from "../pages/SignUp";
+import AdminRoute from "./AdminRoute";
 import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
@@ -61,7 +62,11 @@ export const router = createBrowserRouter([
       // admin routes
       {
         path: "users",
-        element: <AllUsers></AllUsers>,
+        element: (
+          <AdminRoute>
+            <AllUsers></AllUsers>
+          </AdminRoute>
+        ),
       },
     ],
   },
